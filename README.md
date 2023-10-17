@@ -8,4 +8,4 @@ Also, welcome to my **wonderland** of terribly written code.
 - [x] Write a README.md
 - [ ] Write unit tests for dynamic array
 - [ ] Write unit tests for singly linked list
-- [ ] I don't know how, just make the code better.
+- [ ] I don't know how, just make the code better

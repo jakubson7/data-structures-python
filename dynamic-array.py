@@ -5,6 +5,9 @@ class Dynamic_array:
         self.__length = 0
         self.__capacity = capacity
         self.__array = [None] * capacity
+    
+    def __len__(self):
+        return self.__length
 
     def get(self, index):
         return self.__array[index]
@@ -18,7 +21,7 @@ class Dynamic_array:
         
         self.__length = 0
 
-    def add(self, element):
+    def append(self, element):
         if self.__length + 1 >= self.__capacity:
             self.__capacity *= 2
             new_array = [None] * self.__capacity
@@ -38,7 +41,7 @@ class Dynamic_array:
             if index != remove_index: new_array.append(element)
 
         self.__array = new_array
-        self.__len -= 1
+        self.__length -= 1
 
     def indexOf(self, index_element):
         for index, element in enumerate(self.__array):
@@ -53,8 +56,4 @@ class Dynamic_array:
     
     def contains(self, element):
         return self.indexof(element) != -1
-
-
-    def __len__(self):
-        return self.__length
 

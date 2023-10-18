@@ -112,15 +112,16 @@ class Doubly_linked_list:
     return None
 
   def indexOf(self, element):
+    trav = self.__head
+    index = 0
+
+    while trav:
+      if trav.value == element: return index
+
+      trav = trav.next
+      index += 1
+
     return -1
 
   def contains(self, element):
     return self.indexOf(element) != -1
-  
-numbers = Doubly_linked_list()
-numbers.append(1)
-numbers.append(2)
-numbers.append(3)
-numbers.append(4)
-numbers.removeAt(1)
-print(numbers.getAll())

@@ -15,3 +15,6 @@ class Stack:
 
     self.size -= 1
     return self.items.pop()
+
+  def is_empty(self):
+    return self.size < 1
